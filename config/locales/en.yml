@@ -1,1 +1,17 @@
+---
+en:
+  secret1: 'Button key'
+  secret2: 'Secret key'
 
+  gateway:
+    mainpay:
+      show:
+        pay: 'Pay'
+        details: 'Payment order %{order_number}'
+
+  admin:
+    payment_methods:
+      form:
+        success_url: 'Success URL'
+        fail_url: 'Fail URL'
+        handler_url: 'Handler URL'

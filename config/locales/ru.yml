@@ -1,1 +1,17 @@
+---
+ru:
+  secret1: 'Ключ кнопки'
+  secret2: 'Секретный ключ'
 
+  gateway:
+    mainpay:
+      show:
+        pay: 'Оплата'
+        details: 'Оплата заказа %{order_number}'
+
+  admin:
+    payment_methods:
+      form:
+        success_url: 'URL успешной покупки'
+        fail_url: 'URL ошибки'
+        handler_url: 'URL обработчика'
