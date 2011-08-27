@@ -1,6 +1,7 @@
 class Gateway::MainpayController < Spree::BaseController
   ssl_required :show
-  before_filter :find_order_and_gateway, :only => :handler
+  before_filter :find_order_and_gateway, :only => [ :handler, :success, :fail ]
+  skip_before_filter :verify_authenticity_token, :only => [ :handler, :success, :fail ]
   
   def show
     @order = Order.find(params[:order_id])
@@ -30,6 +31,21 @@ class Gateway::MainpayController < Spree::BaseController
      render :text => 'Bad response'
    end
 
+  end
+
+  def success
+    if @order && @gateway && response_valid? && @order.complete?
+      session[:order_id] = nil
+      redirect_to order_path(@order), t('.success')
+    else
+      flash[:error] = t('.fail')
+      redirect_to root_url
+    end
+  end
+
+  def fail
+    flash[:error] = t('.fail')
+    redirect_to @order.blank? ? root_url : checkout_state_path('payment')
   end
 
   private
