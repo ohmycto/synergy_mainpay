@@ -24,7 +24,7 @@ class Gateway::Mainpay < Gateway
   end
 
   def input_url
-    'http://partner.mainpay.ru/a1lite/input'
+    'https://partner.mainpay.ru/a1lite/input'
   end
 
 end
