@@ -2,6 +2,8 @@
 ru:
   secret1: 'Ключ кнопки'
   secret2: 'Секретный ключ'
+  payment_fail: 'Не удалось выполнить платеж'
+  payment_success: 'Платеж выполнен успешно'
 
   gateway:
     mainpay:

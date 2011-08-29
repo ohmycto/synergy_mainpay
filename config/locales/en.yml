@@ -2,6 +2,8 @@
 en:
   secret1: 'Button key'
   secret2: 'Secret key'
+  payment_fail: 'Failed to make payment'
+  payment_success: 'Payment is successfull'
 
   gateway:
     mainpay:
