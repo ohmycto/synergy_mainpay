@@ -22,7 +22,7 @@ class Gateway::MainpayController < Spree::BaseController
      payment.save
 
      @order.save!
-     @order.next! until @order.state == 'completed'
+     @order.next! until @order.state == 'complete'
      @order.update!
 
      render :text => "OK#{@order.id}"
