@@ -51,7 +51,7 @@ class Gateway::MainpayController < Spree::BaseController
   private
 
   def find_order_and_gateway
-    @order = Order.find_by_id(params[:order_id])
+    @order = Order.find_by_id(params[:comment])
     @gateway = Gateway::Mainpay.current
   end
 
