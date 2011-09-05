@@ -1,6 +1,6 @@
 class Gateway::Mainpay < Gateway
-  Urls = { :success_url => 'success', :fail_url => 'fail', :handler_url => 'handler' }
-  Urls.each do |key, value|
+  URLS = { :success_url => 'success', :fail_url => 'fail', :handler_url => 'handler' }
+  URLS.each do |key, value|
     define_method(key) { "http://[domain]/gateway/mainpay/#{value}" }
   end
 
@@ -20,7 +20,7 @@ class Gateway::Mainpay < Gateway
   end
 
   def urls
-    Urls
+    URLS
   end
 
   def input_url
