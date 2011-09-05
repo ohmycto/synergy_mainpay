@@ -1,6 +1,6 @@
 ---
 en:
-  secret1: 'Button key'
+  secret1: 'Payment button key'
   secret2: 'Secret key'
   payment_fail: 'Failed to make payment'
   payment_success: 'Payment is successfull'
