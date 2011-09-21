@@ -8,6 +8,7 @@
   <%= hidden_field_tag(:order_id, @order.id)%>
   <%= hidden_field_tag(:name, t('.details', :order_number =>  @order.number)) %>
   <%= hidden_field_tag(:cost, @order.total) %>
+  <%= hidden_field_tag(:comment, 'from_synergy') %>
 
   <% if @gateway.options[:test_mode] %>
     <%= hidden_field_tag(:test, 1) %>
