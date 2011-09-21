@@ -5,10 +5,9 @@
 <%= form_tag @gateway.input_url, :method => :post, :accept_charset => 'UTF8' do %>
   <%= hidden_field_tag(:default_email, current_user.email)%>
   <%= hidden_field_tag(:key, @gateway.options[:secret1]) %>
-  <%= hidden_field_tag(:order_id, 0)%>
+  <%= hidden_field_tag(:order_id, @order.id)%>
   <%= hidden_field_tag(:name, t('.details', :order_number =>  @order.number)) %>
   <%= hidden_field_tag(:cost, @order.total) %>
-  <%= hidden_field_tag(:comment, @order.id) %>
 
   <% if @gateway.options[:test_mode] %>
     <%= hidden_field_tag(:test, 1) %>
