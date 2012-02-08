@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.platform = Gem::Platform::RUBY
   s.name = 'synergy_mainpay'
-  s.version = '0.60.1'
+  s.version = '0.70.1'
   s.summary = 'Adds payment method for mainpay.ru'
   s.required_ruby_version = '>= 1.8.7'
 
@@ -15,6 +15,6 @@ Gem::Specification.new do |s|
   s.require_paths = [ 'lib' ]
   s.requirements << 'none'
 
-  s.add_dependency('spree_core', '>= 0.60.1')
+  s.add_dependency('spree_core', '>= 0.70.1')
 
 end
