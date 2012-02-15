@@ -70,14 +70,14 @@ class Gateway::MainpayController < Spree::BaseController
       params[:type],
       params[:partner_income],
       params[:system_income],
-      params[:test],
+      (params[:test] if @gateway.options[:test_mode]),
       @gateway.options[:secret2]
     ].join
 
     unless params[:check].downcase == Digest::MD5.hexdigest(joined_params).downcase
       return false
     end
-      
+
     true
 
   end
